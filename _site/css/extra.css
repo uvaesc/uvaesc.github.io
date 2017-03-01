@@ -1,0 +1,57 @@
+/* 
+ * extra CSS templates for uvaesc.com 
+ * created by Jack Morris, 06/19/16
+ */
+
+
+/* A class to align images with different size by aspect ratio */
+.aspect-ratio-container-list > li > a
+{
+  display: block;
+  width: 100%;
+  position: relative;
+  height: 0;
+  padding: 56.25% 0 0 0;
+  overflow: hidden;
+  /* background: rgba(0,0,0,.5); */ /* Enable this line for a partially opaque mask behind each image container */
+}
+
+.aspect-ratio-container-list > li > a > img
+{
+  position: absolute;
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+/* 
+ * For the entire body, helps to stick footer at bottom.
+ * Thanks, Designed by Flexbox! 
+ */
+.site-body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+/* Content in between HEAD and FOOT */
+.site-content {
+  flex: 1;
+  padding: 30px;
+}
+
+/* For files that override */
+.site-content:empty {
+  display: none;
+}
+
+/* To tint HTML elements with an overlay - used on images on the homepage */
+.overlay-tint {
+  background: rgba(50,50,50,0.35);
+  width: 100%;
+  height: 100%;
+}

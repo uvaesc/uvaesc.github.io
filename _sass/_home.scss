@@ -1,0 +1,180 @@
+/*
+ * Jack Morris 07/12/16
+ */ 
+
+ 
+ // Globals
+
+$body-background: #fcfcfc;
+$navbar-background: #f0f0f0;
+$navbar-height: 65px;
+$jack-brand-color: black;
+
+@charset "utf-8";
+
+// Everything
+
+body {
+  background: $body-background;
+}
+
+a {
+  // don't display tacky hand-with-pointing-finger over links
+  cursor: default;
+}
+
+// Generic navbar
+
+.jack-navbar {
+  background: $navbar-background;
+  position: relative;
+  min-height: $navbar-height;
+  border: 1px solid transparent;
+  margin: 0; // bootstrap override
+  text-align: center;
+}
+
+// Main landing header
+
+.site-header-img {
+  background-image: url('../img/home-laptop.jpg');
+  background-position: bottom;
+  background-repeat: space;
+  .site-header {
+    padding: 150px 0 150px 0;
+    color: white;
+    text-align: center;
+  }
+}
+
+// Logo
+
+/* Styling for LetteringJS and my logo*/
+#jack-logo {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 160px;
+  color: #aaa;
+  text-shadow: #666 -4px 4px 0;
+  span {
+    display: inline-block;
+    position: relative;
+    letter-spacing: -1px;
+    -webkit-transition: all 0.4s ease-out;
+  }
+  .letter-hover {
+    cursor: pointer;
+    color: #005 !important;
+    opacity: 0.75;
+    font-size: 5rem !important;
+  }
+  font-size: 4rem;
+}
+
+.img-overlay {
+  background: rgba(0,0,0,.7);
+}
+
+// Sticky footer https://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/ 
+
+.Site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.Site-content {
+  flex: 1;
+}
+
+// Footer
+
+footer {
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+// Social Media Icons 
+.social-media-icons {
+  div {
+    display: inline;
+    margin-left: 15px;
+  }
+  svg {
+    height: 10%;
+    width: 10%;
+    cursor: pointer;
+    border-radius: 50%;
+    background: none;
+    fill: black; //default
+    &:hover {
+      border-radius: 100%;
+      transform: scale(1.15);
+      transition: all .5s ease-out;
+      fill: white;
+      background: rgba(0,0,0,.8);
+    }
+  }
+}
+
+// List of post previews
+// Forever inspired by https://philipwalton.com/
+.post-list {
+  padding: 0; // important
+  list-style: none;
+  .header {
+    text-align: center;
+    padding: 15px;
+    h2 {
+      margin: 0;
+    }
+  }
+  li {
+    padding: 30px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+}
+
+$post-subheader: #aaa;
+$post-header: #404040;
+$post-header-selected: #337ab7;
+
+// Post item
+.post-preview {
+  .date {
+    font-size: 0.9em;
+    color: $post-subheader;
+  }
+  .title {
+    margin: .667em 0 .333em;
+    font-size: 1.6em;
+    color: $post-header;
+  }
+  .content {
+    font-size: 1.1em;
+    color: $post-subheader;
+  }
+  &:hover {
+    text-decoration: none;
+    // don't underline
+    .title {
+      color: $post-header-selected;
+    }
+  }
+}
+
+// RSS subscribe
+.subscribe {
+  text-align: center;
+}
+
+// Entire post block
+.post {
+  padding: 0 30px 0 30px; // nicer padding for mobile
+}
+// Post content
+.post-content {
+  padding-bottom: 5px;
+  border-bottom: 1px solid #e0e0e0;
+}

@@ -1,0 +1,122 @@
+/*
+ * Jack Morris 07/12/16
+ */ 
+
+ #duncan-graphic {    
+    margin-left: -8.33333333%;
+    margin-right: -8.33333333%;
+    display: flex;
+    .chart-container {
+      flex: 4; // 4 : 1
+      $chart-padding: 100px;
+      $chart-padding-half: $chart-padding / 2;
+      padding: $chart-padding 0 $chart-padding 0;
+      position: relative;
+      .title {
+        position: absolute;
+        color: #333;
+      }
+      .chart-title {
+        font-size: 1.25em;
+        left: 50%;
+        top: 0;
+        transform: translate(-50%, 100%);
+      }
+      .x-title {
+        font-size: 1.0em;
+        left: 50%;
+        bottom: $chart-padding;
+        transform: translateY(300%);
+      }
+      .y-title {
+        font-size: 1.0em;
+        left: $chart-padding-half;
+        top: $chart-padding;
+        transform: translate(-40px,-200%);
+      }
+      .axis-point {
+        opacity: 0.5;
+      }
+      .x-axis {
+        height: $chart-padding-half;
+        width: calc(100% - #{$chart-padding-half});
+        position: absolute;
+        left: $chart-padding-half;
+        bottom: $chart-padding-half;
+        display: flex;
+        flex-direction: row;
+        border-top: 1px solid #e0e0e0;
+        > div {
+          flex: 1;
+          text-align: center;
+          font-size: 0.9em;
+        }
+      }
+      .y-axis {
+        width: $chart-padding-half;
+        float: left;
+        display: flex;
+        flex-direction: column-reverse;
+        border-right: 1px solid #e0e0e0;
+        > div {
+          flex: 1;
+          font-size: 0.9em;
+          text-align: right;
+          padding-right: 5px;
+        }
+      }
+      .chart {
+        display: flex;
+        align-items: flex-end; // bottom
+        > div {
+          margin: 1px;
+          flex: 1;
+          opacity: 0.95;
+          position: relative;
+          transition: 200ms opacity ease-in-out;
+          > img {
+            position: absolute;
+            width: 100%;
+            transform: translateY(-100%);
+            transition: 200ms transform linear;
+          }
+          > p {
+            color: black;
+            position: absolute;
+            line-height: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            &.datum {
+              top: -20px;
+            }
+            &.axis-point {
+              bottom: -30px;
+            }
+          }
+          &:hover {
+            opacity: 0.5;
+            > img {
+              transform: translateY(-120%);
+            }
+          }
+        }
+        .tim {
+          background: #666;
+        }
+        .not-tim {
+          background: #e0e0e0;
+        }
+      }
+    }
+    .info-container {
+      flex: 1; // 1 : 4
+      border: 1px solid #e0e0e0;
+    }
+  }
+
+@media (max-width: 600px) {
+  .axis-point:nth-child(2n+1) {  
+    visibility: hidden;
+  }
+}

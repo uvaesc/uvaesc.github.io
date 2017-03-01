@@ -1,0 +1,20 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole site, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Jack Morris
+email: jxmorris12@gmail.com
+description: > 
+  The Personal Website for Jack Morris.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://jackxmorris.com" # the base hostname & protocol for your site
+twitter_username: jxmorris12
+github_username:  jxmorris12
+
+# Build settings
+markdown: kramdown
+permalink: /posts/:title # to style URLs like /posts/the-name-of-the-post.html
