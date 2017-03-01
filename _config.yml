@@ -6,15 +6,12 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Jack Morris
-email: jxmorris12@gmail.com
-description: > 
-  The Personal Website for Jack Morris.
+title: UVA Engineering Student Council
+email: uvaesc.com
+description: >
+  The website for the Engineering Student Council at the University of Virginia.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://jackxmorris.com" # the base hostname & protocol for your site
-twitter_username: jxmorris12
-github_username:  jxmorris12
+url: "http://www.uvaesc.com" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
-permalink: /posts/:title # to style URLs like /posts/the-name-of-the-post.html
