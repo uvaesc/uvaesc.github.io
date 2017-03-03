@@ -7,11 +7,11 @@
 
 # Site settings
 title: UVA Engineering Student Council
-email: uvaesc@gmail.com
+email: estuduva@gmail.com
 description: >
   The website for the Engineering Student Council at the University of Virginia.
 baseurl: "" # the subpath of your site, e.g. /blog
-# url: "http://www.uvaesc.com" # the base hostname & protocol for your site
+url: "http://www.uvaesc.com" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
