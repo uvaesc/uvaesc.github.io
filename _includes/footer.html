@@ -11,3 +11,7 @@
 <script src="/js/jquery.isotope.min.js"></script>
 <script src="/js/main.js"></script>
 <script src="/js/wow.min.js"></script>
+{% if jekyll.environment == 'production' %}
+    <!-- Google Analytics (should be included on every page) -->
+    {% include google-analytics.html %}
+{% endif %}
